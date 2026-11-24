@@ -1,0 +1,10 @@
+# Copy to configs/local_base.toml and edit paths.
+# M0 base preprocessing (reference site A).
+[paths]
+raw_root = "/path/to/omop_parquet"
+output_root = "outputs/base"
+[events]
+# Multi-day visits: move final diagnoses and KCD-derived procedure/measurement/observation rows to the visit end date.
+move_discharge_codes_to_visit_end = true
+[tokenization]
+demographic_tokens = true

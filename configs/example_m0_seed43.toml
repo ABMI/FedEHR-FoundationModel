@@ -1,0 +1,15 @@
+# Copy to configs/local_m0_seed43.toml and edit paths.
+# M0 repeat: same inputs and settings; only the seed (initial weights, batch order) changes.
+[paths]
+raw_root = "/path/to/omop_parquet"
+base_output_root = "outputs/base"
+source_variant_root = "outputs/base"
+output_root = "outputs/m0_seed43"
+[tokenization]
+mode = "concept_value_joint"
+demographic_tokens = true
+[model]
+architecture = "gpt2"
+[training]
+# Default 42.
+seed = 43

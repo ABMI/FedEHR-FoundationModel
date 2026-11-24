@@ -1,0 +1,15 @@
+# Copy to configs/local_site_D0_random_joint.toml and edit paths (one file per site).
+# Joint-token inputs for a simulated new site.
+[paths]
+raw_root = "/path/to/omop_parquet"
+base_output_root = "outputs/sites/D0_random/base"
+source_variant_root = "outputs/sites/D0_random/base"
+output_root = "outputs/sites/D0_random/joint"
+[reference]
+# M0 model folder; its joint vocabulary is reused as is.
+variant_root = "outputs/m0"
+[tokenization]
+mode = "concept_value_joint"
+demographic_tokens = true
+[model]
+architecture = "gpt2"

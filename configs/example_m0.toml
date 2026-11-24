@@ -1,0 +1,12 @@
+# Copy to configs/local_m0.toml and edit paths.
+# Reference model M0: GPT-2 (learned absolute positions) on joint tokens over the base preprocessing.
+[paths]
+raw_root = "/path/to/omop_parquet"
+base_output_root = "outputs/base"
+source_variant_root = "outputs/base"
+output_root = "outputs/m0"
+[tokenization]
+mode = "concept_value_joint"
+demographic_tokens = true
+[model]
+architecture = "gpt2"

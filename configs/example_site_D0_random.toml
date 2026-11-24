@@ -1,0 +1,15 @@
+# Copy to configs/local_site_D0_random.toml and edit paths (one file per site).
+# Base preprocessing for a simulated new site.
+[paths]
+raw_root = "/path/to/omop_parquet"
+output_root = "outputs/sites/D0_random/base"
+[sample]
+# Patient list written by `federated site-make`.
+patients_file = "outputs/sites/D0_random.parquet"
+[reference]
+# M0 base preprocessing; its unit conversions, range checks, decile bins and base vocabulary are reused.
+root = "outputs/base"
+[events]
+move_discharge_codes_to_visit_end = true
+[tokenization]
+demographic_tokens = true
